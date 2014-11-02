@@ -2,5 +2,5 @@ include MANIFEST.in
 
 recursive-include seammerging *.py *pyx
 exclude RELEASING.txt
-include README.md
+include README
 include RELEASING.txt
