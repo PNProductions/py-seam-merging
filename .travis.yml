@@ -13,6 +13,7 @@ before_install:
 # command to install dependencies
 install:
  - sudo pip install cython > /dev/null
+ - sudo pip install numpy > /dev/null
  - sudo pip install --upgrade .
  - sudo pip install nose > /dev/null
  - echo "Installation complete!"
