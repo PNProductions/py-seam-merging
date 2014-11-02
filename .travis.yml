@@ -12,12 +12,9 @@ before_install:
  - sudo apt-get install gfortran libopenblas-dev liblapack-dev
 # command to install dependencies
 install:
- # - pip install -r requirements.txt > /dev/null 2> /dev/null
- # http://stackoverflow.com/questions/11108461/python-importerror-cython-distutils
- # - export BASE_PYTHON_PATH=`which python`
- # - sudo $BASE_PYTHON_PATH setup.py install
- - sudo pip install --upgrade .
- - sudo pip install nose
+ - sudo pip install cython > /dev/null
+ - sudo pip install --upgrade . > /dev/null
+ - sudo pip install nose > /dev/null
  - echo "Installation complete!"
 # command to run tests
 script:

@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/PNProductions/video-seam-merging.svg?branch=master)](https://travis-ci.org/PNProductions/video-seam-merging)
+[![Build Status](https://travis-ci.org/PNProductions/py-seam-merging.svg)](https://travis-ci.org/PNProductions/py-seam-merging)
 
-Video Seam Merging
+Python Seam Merging
 ======
 This is a Python implementation of [IMAGE RESIZING USING IMPROVED SEAM MERGING](http://www.mirlab.org/conference_papers/International_Conference/ICASSP%202012/pdfs/0001261.pdf) method.
 
@@ -8,11 +8,12 @@ Requirements
 ------------------
 To run this code you need the following packages:
 
-* [Python 2.7](https://www.python.org/download/releases/2.7/)
-* [OpenCV](http://opencv.org/)
+* Python [2.6](https://www.python.org/download/releases/2.6/) and [2.7](https://www.python.org/download/releases/2.7/)
 * [Numpy](http://www.numpy.org/)
 * [Cython](https://github.com/pmneila/PyMaxflow)
 * [numexpr](https://github.com/pydata/numexpr)
+* [OpenCV](http://opencv.org/) (optional, only to run examples)
+* [Scipy](http://www.scipy.org/) (optional, only to tests)
 
 Maybe it should work also on other version of python, but it's untested.
 
@@ -40,23 +41,7 @@ nosetests
 
 Examples
 -----------------
-
-```python
-from seam_merging import SeamMergingWithDecomposition, importance_map, cartoon_image
-
-# Setup
-image = imread('your_image.png')
-cartoon = cartoon_image(image) # TODO!!!
-importance = importance_map(image) # TODO!!!
-number_of_pixels = 100
-
-# Start algorithm
-result = seam_merging(image, cartoon, importance, number_of_pixels)
-imwrite('result.png', result)
-```
-
-The parameter `number_of_pixels` should be `-image_size < number_of_pixels < ∞`.
-
+Check ``examples`` folder for some examples.
 
 Final Notes
 -----------------
