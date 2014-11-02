@@ -12,20 +12,12 @@ before_install:
  - sudo apt-get install gfortran libopenblas-dev liblapack-dev
 # command to install dependencies
 install:
- - pip install -r requirements > /dev/null 2> /dev/null
- - echo "Installing PyMaxflow..."
- - git clone https://github.com/pmneila/PyMaxflow
- - cd PyMaxflow
- - python setup.py build
+ # - pip install -r requirements.txt > /dev/null 2> /dev/null
  # http://stackoverflow.com/questions/11108461/python-importerror-cython-distutils
- - export BASE_PYTHON_PATH=`which python`
- - sudo $BASE_PYTHON_PATH setup.py install
- - cd ..
- - rm -rf PyMaxflow
- - python setup.py build_ext
- - find ./build/* -name '*.so' -exec cp {} src \;
- - echo "Checking active modules:"
- - pydoc modules
+ # - export BASE_PYTHON_PATH=`which python`
+ # - sudo $BASE_PYTHON_PATH setup.py install
+ - sudo pip install --upgrade .
+ - sudo pip install nose
  - echo "Installation complete!"
 # command to run tests
 script:

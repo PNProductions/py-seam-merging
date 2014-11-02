@@ -4,4 +4,4 @@ import sys
 if 'TRAVIS' in os.environ:
   sys.path.insert(0, '/usr/lib/pyshared/python2.7')
 
-sys.path.insert(0, '../seammerging')
+sys.path.insert(0, './seammerging')
