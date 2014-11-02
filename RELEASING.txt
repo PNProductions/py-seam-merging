@@ -1,5 +1,5 @@
 ==================
-Releasing Numexpr
+Releasing py-seam-merging
 ==================
 
 :Author: Piero Dotti, Paolo Guglielmini
@@ -7,13 +7,10 @@ Releasing Numexpr
 :Date: 2014-11-02
 
 
-Following are notes useful for releasing Numexpr.
+Following are notes useful for releasing py-seam-merging.
 
 Preliminaries
 -------------
-
-- Make sure that ``RELEASE_NOTES.txt`` and ``ANNOUNCE.txt`` are up to
-  date with the latest news in the release.
 
 - Do a commit and a push:
 
