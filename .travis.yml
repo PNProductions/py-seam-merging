@@ -12,6 +12,7 @@ before_install:
  - sudo apt-get install gfortran libopenblas-dev liblapack-dev
 # command to install dependencies
 install:
+ - sudo pip install cython
  - sudo pip install --upgrade .
  # Testing requirements
  - sudo pip install nose > /dev/null
