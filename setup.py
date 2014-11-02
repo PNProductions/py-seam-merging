@@ -64,7 +64,7 @@ setup(name=__module_name__,
       license='MIT',
       url='http://github.com/PnProductions/py-seam-merging',
       packages=['seammerging'],
-      ext_modules=cythonize(extensions),
+      ext_modules=extensions,
       install_requires=requirements,
       setup_requires=requirements
       )
