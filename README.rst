@@ -38,7 +38,7 @@ Maybe you have to run it with ``sudo``.
 Testing
 -------
 
-Test are provided via ```unittest```_.
+Test are provided via `unittest`_.
 
 To run them all:
 

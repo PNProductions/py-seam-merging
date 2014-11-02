@@ -11,8 +11,8 @@ import runpy
 from distutils.extension import Extension
 import sys
 
-if sys.version_info < (2, 6):
-    raise RuntimeError('must use python 2.6 or greater')
+if sys.version_info < (2, 7):
+    raise RuntimeError('must use python 2.7 or greater')
 
 __version_str__ = runpy.run_path("seammerging/version.py")["version"]
 
@@ -64,7 +64,7 @@ setup(name=__module_name__,
       license='MIT',
       url='http://github.com/PnProductions/py-seam-merging',
       packages=['seammerging'],
-      ext_modules=extensions,
+      ext_modules=cythonize(extensions),
       install_requires=requirements,
       setup_requires=requirements
       )
