@@ -4,7 +4,7 @@ import numpy as np
 from random import random
 import numexpr as ne
 from native_seam_merging import improved_sum_shifted
-from _utils import cli_progress_bar
+from seammerging.utils import cli_progress_bar
 
 PROGRESS_BAR = True
 

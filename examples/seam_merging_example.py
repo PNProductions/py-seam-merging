@@ -17,7 +17,7 @@ saveBMP = True
 
 file_suffix = '_small'
 
-folder_name = 'example_result'
+folder_name = 'results'
 
 X = image_open(local_path('../assets/seam_merging' + file_suffix + '.bmp'))
 
@@ -35,8 +35,6 @@ kernel = array([[0, 0, 0],
                    ])
 
 importance = abs(cv2.filter2D(y[:, :, 0], -1, kernel, borderType=cv2.BORDER_REPLICATE)) + abs(cv2.filter2D(y[:, :, 0], -1, kernel.T, borderType=cv2.BORDER_REPLICATE))
-
-folder_name = 'example_result'
 
 img = seam_merging(X, structureImage, importance, deleteNumberW, alpha, betaEn)
 size = '_reduce' if deleteNumberW < 0 else '_enlarge'

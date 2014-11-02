@@ -1,3 +1,4 @@
+import numpy as np
 cimport numpy as np
 ctypedef np.float64_t dtype_t
 cimport cython
