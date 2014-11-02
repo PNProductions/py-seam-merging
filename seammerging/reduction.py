@@ -3,10 +3,8 @@ from numpy import max, concatenate, size, ones, r_, zeros, inf, amax, where, sha
 import numpy as np
 from random import random
 import numexpr as ne
-from native_seam_merging import improved_sum_shifted
-from seammerging.utils import cli_progress_bar
-
-PROGRESS_BAR = True
+from seammerging.native import improved_sum_shifted
+from seammerging.utils import cli_progress_bar, cli_progress_bar_end
 
 
 class SeamMergingWithDecomposition(object):
@@ -342,8 +340,9 @@ class SeamMergingWithDecomposition(object):
     # upQ11, upQ12, upP12, upP22 = None, None, None, None
 
     # For each seam I want to merge
-    for i in xrange(0, self.deleteNumberW + self.deleteNumberH):
-      print(i)
+    num_seams = self.deleteNumberW + self.deleteNumberH
+    for i in xrange(0, num_seams):
+      cli_progress_bar(i, num_seams)
 
       # Improved sum shifted = summing each column of the pixel with the
       # one in the right. It's the look-forward value for each matrix.
@@ -408,6 +407,7 @@ class SeamMergingWithDecomposition(object):
 
       q11, q12, p12, p22, Simg, Z = self.apply_seam_merging(pix.transpose()[0], q11, upQ11, q12, upQ12, p12, upP12, p22, upP22, Simg, v, Z)
 
+    cli_progress_bar_end()
     img = Z[:, :, ZIindex]
     img = img / Z[:, :, [ZUindex, ZUindex, ZUindex]]  # ???
     return img
