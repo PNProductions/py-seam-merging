@@ -12,15 +12,12 @@ before_install:
  - sudo apt-get install gfortran libopenblas-dev liblapack-dev
 # command to install dependencies
 install:
- - sudo pip install cython
- - sudo pip install numpy
- - sudo pip install -r requirements.txt
- - export BASE_PYTHON_PATH=`which python`
- - python setup.py build
- - sudo $BASE_PYTHON_PATH setup.py install
+ - pip install cython
+ - pip install numpy
+ - pip install .
  # Testing requirements
- - sudo pip install nose > /dev/null
- - sudo pip install scipy > /dev/null
+ - pip install nose > /dev/null
+ - pip install scipy > /dev/null
  - echo "Installation complete!"
 # command to run tests
 script:
