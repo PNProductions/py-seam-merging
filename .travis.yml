@@ -1,7 +1,6 @@
 language: python
 python:
   - "2.7"
-  - "3.4"
 before_install:
  - sudo apt-get update
  - sudo apt-get install python-opencv
@@ -18,7 +17,7 @@ install:
  - python setup.py install
  # Testing requirements
  - pip install nose > /dev/null
- - pip install scipy > /dev/null
+ - pip install scipy
  - echo "Installation complete!"
 # command to run tests
 script:
