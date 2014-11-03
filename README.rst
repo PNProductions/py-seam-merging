@@ -65,4 +65,4 @@ purposes.
 .. _numexpr: https://github.com/pydata/numexpr
 .. _OpenCV: http://opencv.org/
 .. _Scipy: http://www.scipy.org/
-.. _``unittest``: https://docs.python.org/2/library/unittest.html
+.. _unittest: https://docs.python.org/2/library/unittest.html
