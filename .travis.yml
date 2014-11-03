@@ -14,7 +14,8 @@ before_install:
 install:
  - pip install cython
  - pip install numpy
- - pip install .
+ - pip install -r requirements.txt
+ - python setup.py install
  # Testing requirements
  - pip install nose > /dev/null
  - pip install scipy > /dev/null
