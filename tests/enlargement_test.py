@@ -2,7 +2,7 @@ import unittest
 from numpy import array, r_, zeros
 import scipy.io
 from numpy.testing import assert_array_equal
-from enlargement import SeamMergingWithDecompositionEnlargement
+from seammerging.enlargement import SeamMergingWithDecompositionEnlargement
 
 X = zeros((5, 5, 3))
 X[:, :, 0] = array([r_[1:6], r_[6:11], r_[11:16], r_[16: 21], r_[21:26]])

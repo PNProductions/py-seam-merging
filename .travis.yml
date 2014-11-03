@@ -18,6 +18,7 @@ install:
  # Testing requirements
  - pip install nose > /dev/null
  - pip install scipy
+ - mv seammerging _seammerging
  - echo "Installation complete!"
 # command to run tests
 script:
