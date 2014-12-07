@@ -21,7 +21,7 @@ folder_name = 'results'
 
 X = image_open(local_path('../assets/seam_merging' + file_suffix + '.bmp'))
 
-deleteNumberW = -size(X, 1) / 2
+deleteNumberW = size(X, 1) / 2
 deleteNumberH = 0
 
 y = cv2.cvtColor(X, cv2.COLOR_BGR2YCR_CB)

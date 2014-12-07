@@ -5,3 +5,7 @@
 *.pyc
 *.c
 build/
+dist/
+py_seam_merging.egg-info
+
+examples/results/*
