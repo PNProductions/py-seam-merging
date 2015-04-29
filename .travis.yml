@@ -7,7 +7,7 @@ before_install:
  - sudo dpkg -L python-opencv
  - sudo apt-get install libboost-all-dev
  - sudo dpkg -L libboost-all-dev
- #http://stackoverflow.com/questions/7496547/python-scipy-needs-blas
+ # http://stackoverflow.com/questions/7496547/python-scipy-needs-blas
  - sudo apt-get install gfortran libopenblas-dev liblapack-dev
 # command to install dependencies
 install:

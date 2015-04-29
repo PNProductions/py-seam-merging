@@ -4,7 +4,7 @@ import seammerging.utils as _utils
 
 
 def progress_bar(value):
-	_utils.PROGRESS_BAR = value
+  _utils.PROGRESS_BAR = value
 
 
 def seam_merging(image, cartoon, structure, enlarge_by, alpha=0.5, beta=0.5):
@@ -13,7 +13,9 @@ def seam_merging(image, cartoon, structure, enlarge_by, alpha=0.5, beta=0.5):
     instance = SeamMergingWithDecompositionEnlargement(image, cartoon, structure, enlarge_by, 0, alpha, beta)
   else:
     instance = SeamMergingWithDecomposition(image, cartoon, structure, -enlarge_by, 0, alpha, beta)
-  return instance.generate()
+  result = instance.generate()
+
+  return result, instance.seams
 
 import version
 import os
