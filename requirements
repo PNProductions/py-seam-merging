@@ -1,0 +1,7 @@
+nose>=1.3
+flake8>=2.2
+Cython>=0.2
+mock>=1.0
+numexpr>=2.4
+scipy>=0.11
+PyMaxFlow>=1.2.1
